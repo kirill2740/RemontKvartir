@@ -6,6 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="src/css/normalize.css">
+	<link rel="stylesheet" href="src/css/slick.css">
 	<link rel="stylesheet" href="src/css/style.css">
 	<title>Ремонт квартир</title>
 </head>
@@ -26,7 +27,7 @@
 					</div>
 					<!-- /.navbar__contacts -->
 
-					<button class="button navbar__button">Перезвоните мне</button> 
+					<button class="button navbar__button" id="button">Перезвоните мне</button>
 					<!-- /.button navbar__button -->
 				</div>
 				<!-- /.navbar__info -->
@@ -44,7 +45,7 @@
 					<div class="hero-text">
 						<h1 class="hero-text__title">Внутренняя отделка помещений "под ключ"</h1>
 						<span class="hero-text__subtitle">с гарантией качества, прописанной в договоре</span>
-						
+
 						<ul class="hero-list">
 							<li class="hero-list__item">
 								<div class="hero-list__img"><img src="src/img/hero/clock.png" alt=""></div>
@@ -76,35 +77,115 @@
 		<section class="offer section">
 			<div class="container">
 				<div class="offer-block">
-					<h2 class="section-title offer__title">Мы бесплатно разработаем дизайн-проект Вашего жилья и реализуем его!</h2>
+					<h2 class="section-title offer__title">Мы бесплатно разработаем дизайн-проект Вашего жилья и реализуем его!
+					</h2>
 					<!-- /.section-title -->
-					<span class="section-subtitle offer__subtitle">Оставьте заявку на разработку бесплатного дизайн-проекта!</span>
+					<span class="section-subtitle offer__subtitle">Оставьте заявку на разработку бесплатного
+						дизайн-проекта!</span>
 					<!-- /.section-subtitle -->
 					<form action="" class="form offer__form">
 						<input type="text" class="input offer__input" placeholder="Ваше имя">
 						<input type="tel" class="input offer__input" placeholder="Ваш телефон">
 						<button class="button offer__button">Получить бесплатный дизайн-проект</button>
 					</form>
-						<div class="offer-info">
-							<span class="offer-info__hint">Наш менеджер перезвонит Вам в течение 60 секунд</span>
-							<!-- /.info__hint -->
-							<div class="offer-info__recall">
-								<span class="offer-info__recall-description">или перезвоните нам сами</span> 
-								<!-- /.recall-description -->
-								<a href="tel:+7 (495) 42-251-31" class="offer-info__recall-phone">+7 (495) 42-251-31</a> 
-								<!-- /.recall-phone -->
-							</div>
-							<!-- /.info__recall -->
+					<div class="offer-info">
+						<span class="offer-info__hint">Наш менеджер перезвонит Вам в течение 60 секунд</span>
+						<!-- /.info__hint -->
+						<div class="offer-info__recall">
+							<span class="offer-info__recall-description">или перезвоните нам сами</span>
+							<!-- /.recall-description -->
+							<a href="tel:+7 (495) 42-251-31" class="offer-info__recall-phone">+7 (495) 42-251-31</a>
+							<!-- /.recall-phone -->
 						</div>
-						<!-- /.offer__info -->
+						<!-- /.info__recall -->
+					</div>
+					<!-- /.offer__info -->
 				</div>
 				<!-- /.offer-block -->
 			</div>
 			<!-- /.container -->
 		</section>
 		<!-- /.offer -->
+
+
+		<section class="section portfolio">
+			<div class="container">
+				<h2 class="section-title portfolio__title">Работая с 2007 года, мы сделали более 500 ремонтов в квартирах и домах</h2>
+				<div class="slider">
+					<div class="slider__item"><img class="slider__img" src="src/img/portfolio/slider1.jpg" alt=""></div>
+					<div class="slider__item"><img class="slider__img" src="src/img/portfolio/slider2.jpg" alt=""></div>
+					<div class="slider__item"><img class="slider__img" src="src/img/portfolio/slider3.jpg" alt=""></div>
+					<div class="slider__item"><img class="slider__img" src="src/img/portfolio/slider2.jpg" alt=""></div>
+				</div>
+				<!-- /.slider -->
+				<div class="arrows portfolio__arrows">
+					<div class="arrows__left"><img src="src/img/portfolio/left-arrow.png" alt=""></div>
+					<div class="arrows__right"><img src="src/img/portfolio/right-arrow.png" alt=""></div>
+				</div>
+			</div>
+			<!-- /.container -->
+		</section>
+		<!-- /.section portfolio -->
 	</main>
-	
+
+
+	<div class="modal" id="modal">
+		<div class="modal-dialog">
+			<div class="modal-dialog__close" id="close">&times;</div>
+			<!-- /.modal-dialog__close -->
+			<h1 class="modal-dialog__title">Узнайте точную стоимость ремонта по телефону!</h1>
+			<!-- /.modal-dialog__title -->
+			<span class="modal-dialog__subtitle">Заполните поля ниже - мы свяжемся с Вами</span>
+			<!-- /.modal-dialog__subtitle -->
+			<form action="" class="form modal-dialog__form">
+				<input type="text" class="input modal-dialog__input" placeholder="Ваше имя">
+				<input type="tel" class="input modal-dialog__input" placeholder="Ваш телефон">
+				<button class="button modal-dialog__button">Узнать стоимость</button>
+			</form>
+
+			<span class="modal-dialog__hint">Или Вы можете перезвонить нам сами
+				по телефону:</span>
+			<!-- /.modal-dialog__hint -->
+			<a href="tel:+7 (8182) 42-51-31" class="modal-dialog__phone">+7 (8182) 42-51-31</a>
+			<!-- /.modal-dialog__phone -->
+
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+
+
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="src/js/modal.js"></script>
+	<script src="src/js/slick.min.js"></script>
+	<script>
+		$(document).ready(function () {
+				$('.slider').slick({
+					slidesToShow: 3,
+					slidesToScroll: 1,
+					prevArrow: $('.arrows__left'),
+					nextArrow: $('.arrows__right'),
+					autoplay: true,
+					autoplaySpeed: 1700,
+					responsive: [
+						{
+							breakpoint: 1200,
+							settings: {
+								slidesToShow: 2,
+								slidesToScroll: 1
+							}
+						},
+						{
+							breakpoint: 768,
+							settings: {
+								slidesToShow: 1,
+								slidesToScroll: 1
+							}
+						}
+					]
+  			});
+		});
+	</script>
 </body>
 
 </html>

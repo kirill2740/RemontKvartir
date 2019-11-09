@@ -1,5 +1,6 @@
 *
 	box-sizing: border-box
+	outline: none
 body
 	+reg
 img
@@ -13,7 +14,6 @@ img
 	border-radius: 10px
 	border: none
 	padding: 18px 30px
-	outline: none
 	cursor: pointer
 	transition: 0.2s
 	&:hover
@@ -23,6 +23,7 @@ img
 	&-title
 		font-size: 24px
 		+bold
+		text-align: center
 	&-subtitle
 		font-size: 16px
 .input
@@ -30,7 +31,8 @@ img
 	border-radius: 10px
 	padding: 20px 26px
 	font-size: 15px
-	outline: none
+	&:focus
+		border: 1px solid $main-color
 @media (max-width: 1200px)
 	.container
 		width: 760px
