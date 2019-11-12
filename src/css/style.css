@@ -192,4 +192,13 @@ img { max-width: 100%; }
 .modal-dialog__phone { text-decoration: none; color: #000; text-align: center; font-size: 24px; font-family: 'Museo Sans Bold', sans-serif; font-weight: 700; display: block; margin-bottom: 76px; }
 
 .modal-dialog__close { position: absolute; top: 10px; right: 15px; cursor: pointer; }
+
+@media (max-width: 768px) { .modal-dialog { width: 100%; padding: 0px 30px; }
+  .modal-dialog__phone { margin-bottom: 35px; }
+  .modal-dialog__title { margin: auto; margin-top: 35px; max-width: 400px; } }
+
+@media (max-width: 567px) { .modal-dialog { max-width: 100%; padding: 20px 25px; }
+  .modal-dialog__phone { font-size: 20px; }
+  .modal-dialog__title { font-size: 20px; line-height: 25px; margin: auto; margin-bottom: 20px; margin-top: 35px; }
+  .modal-dialog__subtitle { font-size: 14px; line-height: 25px; } }
 /*# sourceMappingURL=style.css.map */
