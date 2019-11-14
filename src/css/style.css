@@ -153,7 +153,7 @@ img { max-width: 100%; }
 
 .card__title { margin-top: 0; }
 
-.card__img { position: relative; }
+.card__img { position: relative; cursor: pointer; }
 
 .card__img:hover::before { opacity: 1; }
 
@@ -169,7 +169,33 @@ img { max-width: 100%; }
 @media (max-width: 567px) { .price__title { font-size: 18px; }
   .price__subtitle { font-size: 14px; }
   .card__title { font-size: 15px; }
-  .card__link { font-size: 16px; } }
+  .card__link { font-size: 16px; }
+  .card__img:hover::before { display: none; } }
+
+.step { -ms-flex-preferred-size: 20%; flex-basis: 20%; text-align: center; position: relative; }
+
+.step::after { content: ''; position: absolute; top: -10px; right: -15%; width: 72px; height: 25px; background: url("../img/steps/arrow.png") no-repeat; }
+
+.step:last-child::after { display: none; }
+
+.step__img { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -ms-flex-align: center; align-items: center; width: 100px; height: 100px; border: 3px solid #ffd200; border-radius: 50%; margin: auto; margin-bottom: 30px; }
+
+.step__text { max-width: 155px; margin: auto; font-size: 14px; line-height: 20px; }
+
+.steps__title { margin: auto; margin-bottom: 59px; }
+
+.steps__subtitle { text-align: center; margin-bottom: 58px; }
+
+.steps-block { display: -webkit-box; display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+@media (max-width: 1200px) { .step { -ms-flex-preferred-size: 50%; flex-basis: 50%; margin-bottom: 30px; }
+  .step::after { display: none; }
+  .steps-block { -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; } }
+
+@media (max-width: 768px) { .step__text { font-size: 12px; line-height: 16px; }
+  .steps__title { font-size: 18px; margin-bottom: 27px; }
+  .steps__subtitle { font-size: 14px; line-height: 45px; margin-bottom: 34px; }
+  .steps-block { -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; } }
 
 .modal { position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 1; background-color: rgba(0, 0, 0, 0.5); display: none; }
 
